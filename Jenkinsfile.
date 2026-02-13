@@ -2,6 +2,11 @@ pipeline {
     agent any
     
     stages {
+        stage('Debug - Am I here?') {
+            steps {
+                echo "Yes! Pipeline is running this stage!"
+            }
+        }
         stage('Checkout') {
             steps {
                 git branch: 'master', 
@@ -79,4 +84,3 @@ pipeline {
         }
     }
 }
-
